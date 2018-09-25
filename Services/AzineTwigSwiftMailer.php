@@ -134,7 +134,7 @@ class AzineTwigSwiftMailer extends TwigSwiftMailer implements TemplateTwigSwiftM
     {
         // create the message
         if (null === $message) {
-            $message = \Swift_Message::newInstance();
+            $message = new \Swift_Message();
         }
 
         $message->setSubject($subject);
