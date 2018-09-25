@@ -3,6 +3,7 @@
 namespace  Azine\EmailBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -18,7 +19,7 @@ class SentEmailType extends AbstractType
         $builder->setMethod('GET');
         $builder->add('recipients', TextType::class, array('label' => false, 'required' => false));
         $builder->add('template', TextType::class, array('label' => false, 'required' => false));
-        $builder->add('sent', TextType::class, array('label' => false, 'required' => false));
+        $builder->add('sent', DateTimeType::class, array('label' => false, 'required' => false));
         $builder->add('variables', TextType::class, array('label' => false, 'required' => false));
         $builder->add('token', TextType::class, array('label' => false, 'required' => false));
 
